@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#f4f6f1">
+	<title>Students | Fieldnote</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="app-shell">
+		<aside class="sidebar" aria-label="Main navigation">
+			<a class="brand" href="#overview" aria-label="Fieldnote home">
+				<span class="brand-mark" aria-hidden="true">f.</span>
+				<span>fieldnote<span class="brand-dot">.</span></span>
+			</a>
+
+			<div class="school-switcher">
+				<span class="school-avatar" aria-hidden="true">N</span>
+				<span class="school-name"><strong>Northwood Academy</strong><small>School workspace</small></span>
+				<span class="switcher-caret" aria-hidden="true">⌄</span>
+			</div>
+
+			<p class="nav-label">WORKSPACE</p>
+			<nav class="primary-nav">
+				<a class="nav-item" href="#overview"><span class="nav-icon" aria-hidden="true">◫</span>Overview</a>
+				<a class="nav-item active" href="#students" aria-current="page"><span class="nav-icon" aria-hidden="true">♧</span>Students<span class="nav-count">248</span></a>
+				<a class="nav-item" href="#courses"><span class="nav-icon" aria-hidden="true">▤</span>Courses</a>
+				<a class="nav-item" href="#attendance"><span class="nav-icon" aria-hidden="true">◷</span>Attendance</a>
+				<a class="nav-item" href="#reports"><span class="nav-icon" aria-hidden="true">▥</span>Reports</a>
+			</nav>
+
+			<div class="sidebar-bottom">
+				<div class="help-card">
+					<span class="help-spark" aria-hidden="true">✳</span>
+					<strong>Need a hand?</strong>
+					<p>Find answers and tips in our help center.</p>
+					<a href="mailto:help@fieldnote.school">Visit help center <span aria-hidden="true">↗</span></a>
+				</div>
+				<a class="profile" href="mailto:admin@northwood.school">
+					<span class="avatar avatar-admin">AM</span>
+					<span class="profile-copy"><strong>Alex Morgan</strong><small>School admin</small></span>
+					<span class="profile-menu" aria-hidden="true">•••</span>
+				</a>
+			</div>
+		</aside>
+
+		<main class="main-content" id="overview">
+			<header class="topbar">
+				<div class="breadcrumbs"><span>Workspace</span><span class="crumb-slash">/</span><strong>Students</strong></div>
+				<div class="topbar-actions">
+					<span class="term-label"><span class="term-dot"></span>Fall semester · 2025–26</span>
+					<button class="icon-button" type="button" aria-label="Notifications"><span aria-hidden="true">♧</span><i></i></button>
+					<span class="avatar avatar-admin top-avatar" aria-label="Alex Morgan">AM</span>
+				</div>
+			</header>
+
+			<div class="page-wrap">
+				<section class="page-heading" id="students">
+					<div>
+						<p class="eyebrow">PEOPLE &amp; RECORDS <span>·</span> 2025–26</p>
+						<h1>Students <span class="title-count">248</span></h1>
+						<p class="page-subtitle">A thoughtful view of every learner in your school.</p>
+					</div>
+					<details class="add-student">
+						<summary><span aria-hidden="true">＋</span> Add student</summary>
+						<form class="student-form" action="#students" method="get">
+							<div class="form-heading"><strong>Add a student</strong><span>New student record</span></div>
+							<label>Full name<input type="text" name="name" placeholder="e.g. Jamie Rivera" required></label>
+							<div class="form-row">
+								<label>Grade<select name="grade" required><option value="">Select grade</option><option>Grade 9</option><option>Grade 10</option><option>Grade 11</option><option>Grade 12</option></select></label>
+								<label>Homeroom<input type="text" name="homeroom" placeholder="e.g. 10B"></label>
+							</div>
+							<label>Email address<input type="email" name="email" placeholder="student@school.edu" required></label>
+							<button class="form-submit" type="submit">Save student <span aria-hidden="true">→</span></button>
+							<p class="form-note">This preview form does not save records yet.</p>
+						</form>
+					</details>
+				</section>
+
+				<section class="stats-grid" aria-label="Student summary">
+					<article class="stat-card stat-total">
+						<div class="stat-top"><span>Total students</span><span class="stat-icon" aria-hidden="true">♧</span></div>
+						<div class="stat-value">248</div>
+						<div class="stat-foot"><span class="trend-up">↗ 12</span> <span>since last term</span></div>
+					</article>
+					<article class="stat-card">
+						<div class="stat-top"><span>Currently enrolled</span><span class="stat-icon green-icon" aria-hidden="true">✓</span></div>
+						<div class="stat-value">236</div>
+						<div class="stat-foot"><span class="status-dot enrolled-dot"></span><span>95% of all students</span></div>
+					</article>
+					<article class="stat-card">
+						<div class="stat-top"><span>New this term</span><span class="stat-icon coral-icon" aria-hidden="true">↗</span></div>
+						<div class="stat-value">18</div>
+						<div class="stat-foot"><span>Across 4 grade levels</span></div>
+					</article>
+					<article class="stat-card">
+						<div class="stat-top"><span>Average attendance</span><span class="stat-icon yellow-icon" aria-hidden="true">◷</span></div>
+						<div class="stat-value">94<span class="percent">%</span></div>
+						<div class="stat-foot"><span class="trend-up">↗ 2.4%</span> <span>vs. last month</span></div>
+					</article>
+				</section>
+
+				<section class="roster-section" aria-labelledby="roster-title">
+					<div class="roster-heading">
+						<div>
+							<h2 id="roster-title">Student directory</h2>
+							<p>Browse and manage your school's student records.</p>
+						</div>
+						<a class="export-link" href="mailto:admin@northwood.school?subject=Student%20directory%20export"><span aria-hidden="true">↓</span> Export list</a>
+					</div>
+
+					<div class="table-toolbar">
+						<label class="search-box"><span aria-hidden="true">⌕</span><input type="search" placeholder="Search students..." aria-label="Search students"></label>
+						<div class="toolbar-filters">
+							<label class="filter-select"><span class="filter-label">Grade</span><select aria-label="Filter by grade"><option>All grades</option><option>Grade 9</option><option>Grade 10</option><option>Grade 11</option><option>Grade 12</option></select></label>
+							<label class="filter-select status-filter"><span class="filter-label">Status</span><select aria-label="Filter by enrollment status"><option>Any status</option><option>Enrolled</option><option>On leave</option></select></label>
+							<button class="filter-button" type="button" aria-label="More filters">☷<span>Filters</span></button>
+						</div>
+					</div>
+
+					<div class="table-scroll">
+						<table>
+							<thead><tr><th class="student-column">STUDENT</th><th>GRADE</th><th>HOMEROOM</th><th>ENROLLMENT</th><th>ATTENDANCE</th><th class="action-column" aria-label="Actions"></th></tr></thead>
+							<tbody>
+								<tr>
+									<td><div class="student-cell"><span class="avatar student-avatar avatar-lilac">EC</span><span class="student-name"><strong>Emma Chen</strong><small>emma.chen@northwood.edu</small></span></div></td>
+									<td><span class="grade-pill">Grade 10</span></td><td>10B <span class="muted-detail">· Ms. Patel</span></td>
+									<td><span class="enrollment"><i class="status-dot enrolled-dot"></i>Enrolled</span></td><td><span class="attendance-value">98%</span><span class="attendance-track"><i style="width: 98%"></i></span></td><td class="row-action"><a href="mailto:emma.chen@northwood.edu" aria-label="Contact Emma Chen">↗</a></td>
+								</tr>
+								<tr>
+									<td><div class="student-cell"><span class="avatar student-avatar avatar-peach">JM</span><span class="student-name"><strong>Jordan Miller</strong><small>jordan.miller@northwood.edu</small></span></div></td>
+									<td><span class="grade-pill">Grade 11</span></td><td>11A <span class="muted-detail">· Mr. Brooks</span></td>
+									<td><span class="enrollment"><i class="status-dot enrolled-dot"></i>Enrolled</span></td><td><span class="attendance-value">93%</span><span class="attendance-track"><i style="width: 93%"></i></span></td><td class="row-action"><a href="mailto:jordan.miller@northwood.edu" aria-label="Contact Jordan Miller">↗</a></td>
+								</tr>
+								<tr>
+									<td><div class="student-cell"><span class="avatar student-avatar avatar-sky">SP</span><span class="student-name"><strong>Sofia Patel</strong><small>sofia.patel@northwood.edu</small></span></div></td>
+									<td><span class="grade-pill">Grade 9</span></td><td>9C <span class="muted-detail">· Ms. Lewis</span></td>
+									<td><span class="enrollment"><i class="status-dot enrolled-dot"></i>Enrolled</span></td><td><span class="attendance-value">96%</span><span class="attendance-track"><i style="width: 96%"></i></span></td><td class="row-action"><a href="mailto:sofia.patel@northwood.edu" aria-label="Contact Sofia Patel">↗</a></td>
+								</tr>
+								<tr>
+									<td><div class="student-cell"><span class="avatar student-avatar avatar-mint">OW</span><span class="student-name"><strong>Oliver Williams</strong><small>oliver.williams@northwood.edu</small></span></div></td>
+									<td><span class="grade-pill">Grade 12</span></td><td>12A <span class="muted-detail">· Mr. Carter</span></td>
+									<td><span class="enrollment"><i class="status-dot leave-dot"></i>On leave</span></td><td><span class="attendance-value attendance-muted">—</span><span class="attendance-track empty-track"><i></i></span></td><td class="row-action"><a href="mailto:oliver.williams@northwood.edu" aria-label="Contact Oliver Williams">↗</a></td>
+								</tr>
+								<tr>
+									<td><div class="student-cell"><span class="avatar student-avatar avatar-yellow">AB</span><span class="student-name"><strong>Ava Brooks</strong><small>ava.brooks@northwood.edu</small></span></div></td>
+									<td><span class="grade-pill">Grade 10</span></td><td>10A <span class="muted-detail">· Ms. Patel</span></td>
+									<td><span class="enrollment"><i class="status-dot enrolled-dot"></i>Enrolled</span></td><td><span class="attendance-value">89%</span><span class="attendance-track"><i class="attendance-low" style="width: 89%"></i></span></td><td class="row-action"><a href="mailto:ava.brooks@northwood.edu" aria-label="Contact Ava Brooks">↗</a></td>
+								</tr>
+								<tr>
+									<td><div class="student-cell"><span class="avatar student-avatar avatar-blue">NK</span><span class="student-name"><strong>Noah Kim</strong><small>noah.kim@northwood.edu</small></span></div></td>
+									<td><span class="grade-pill">Grade 11</span></td><td>11B <span class="muted-detail">· Ms. Lewis</span></td>
+									<td><span class="enrollment"><i class="status-dot enrolled-dot"></i>Enrolled</span></td><td><span class="attendance-value">97%</span><span class="attendance-track"><i style="width: 97%"></i></span></td><td class="row-action"><a href="mailto:noah.kim@northwood.edu" aria-label="Contact Noah Kim">↗</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<footer class="table-footer"><span>Showing <strong>6</strong> of <strong>248</strong> students</span><nav class="pagination" aria-label="Directory pages"><a class="page-arrow disabled" href="#students" aria-label="Previous page">←</a><a class="page-number current-page" href="#students" aria-current="page">1</a><a class="page-number" href="#students">2</a><a class="page-number" href="#students">3</a><span class="page-ellipsis">…</span><a class="page-number" href="#students">42</a><a class="page-arrow" href="#students" aria-label="Next page">→</a></nav></footer>
+				</section>
+
+				<div class="page-anchors" aria-hidden="true"><span id="courses"></span><span id="attendance"></span><span id="reports"></span></div>
+				<footer class="app-footer"><span>© 2025 Fieldnote Education</span><span>Made for the people who make school matter.</span></footer>
+			</div>
+		</main>
+	</div>
+</body>
+</html>
