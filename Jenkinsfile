@@ -42,7 +42,8 @@ pipeline {
             echo 'Pipeline failed! Check build logs.'
         }
     }
-}
-triggers {
+
+    triggers {
     pollSCM('H/5 * * * *')
+}
 }
