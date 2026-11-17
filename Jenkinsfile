@@ -7,15 +7,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                echo 'Cloning project from GitHub...'
-
-                git branch: 'main',
-                    url: 'YOUR_GITHUB_REPOSITORY_URL'
-            }
-        }
-
         stage('Build') {
             steps {
                 echo 'Build Step: Check files in workspace'
@@ -25,9 +16,10 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo "Deploying Home.html to IIS folder"
+                echo "Deploying Student.html and style.css to IIS folder"
 
-                bat "xcopy /Y Home.html ${DEPLOY_DIR}\\"
+                bat "xcopy /Y Student.html ${DEPLOY_DIR}\\"
+                bat "xcopy /Y style.css ${DEPLOY_DIR}\\"
             }
         }
 
@@ -43,7 +35,7 @@ pipeline {
 
     post {
         success {
-            echo 'Pipeline finished successfully! Visit: http://localhost/Home.html'
+            echo 'Pipeline finished successfully! Visit: http://localhost/Student.html'
         }
 
         failure {
